@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,64 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic Tac Toe</h1>
+      <div id="message">
+        <span class="opening-message">This is the default message when you land on this page.</span>
+        <!-- sign up form starts here -->
+        <form id="sign-up-form">
+          <legend>Sign-up to play Tic Tac Toe!</legend>
+          <input name="credentials[email]" type="text" placeholder="email"/>
+          <input name="credentials[password]" type="password" placeholder="password"/>
+          <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
+          <input type="submit" />
+        </form>
+        <!-- sign up form ends here -->
+        <!-- sign in form starts here -->
+        <form id="sign-in-form">
+          <legend>Sign-in to play Tic Tac Toe!</legend>
+          <input name="credentials[email]" type="text" placeholder="email"/>
+          <input name="credentials[password]" type="password" placeholder="password"/>
+          <input type="submit" />
+        </form>
+        <!-- sign in form ends here -->
+        <!-- change password form starts here -->
+        <form id="change-password-form" class="hidden">
+          <legend>Want to change your password?</legend>
+          <input name="passwords[old]" type="password" placeholder="old password"/>
+          <input name="passwords[new]" type="password" placeholder="new password"/>
+          <input type="submit" />
+        </form>
+        <!-- change password form ends here -->
+        <br>
+        <!-- log out button starts here -->
+        <button id="sign-out-button" class="hidden">Sign out</button>
+        <!-- log out button ends here -->
+      </div>
+      <br>
+      <div class="container hidden">
+        <div class="row">
+          <div class="col-4 box data-cell-index0">ARRAY 0</div>
+          <div class="col-4 box data-cell-index1">ARRAY 1</div>
+          <div class="col-4 box data-cell-index2">ARRAY 2</div>
+        </div>
+        <div class="row">
+          <div class="col-4 box data-cell-index3">ARRAY 3</div>
+          <div class="col-4 box data-cell-index4">ARRAY 4</div>
+          <div class="col-4 box data-cell-index5">ARRAY 5</div>
+        </div>
+        <div class="row">
+          <div class="col-4 box data-cell-index6">ARRAY 6</div>
+          <div class="col-4 box data-cell-index7">ARRAY 7</div>
+          <div class="col-4 box data-cell-index8">ARRAY 8</div>
+        </div>
+      </div>
+      <div class="game-form">
+        <button id="start-new-game" class="hidden">Start new game</button>
+        <form id="reset-game-form" class="hidden">
+          <legend>Want to resume an old game?</legend>
+          <input name="game[id]" placeholder="Game ID" />
+          <input type="submit" />
+        </form>
+      </div>
     </body>
 </html>

@@ -1,1 +1,22 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  text-align: center
+}
+
+.opening-message {
+  font-size: 20px;
+}
+
+.box {
+  align-items: center;
+  border: 1px solid;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  padding: 100px;
+}
+
+.hidden {
+  visibility: hidden;
+}
