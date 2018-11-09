@@ -16,7 +16,6 @@ const signInSuccess = function (signInResponse) {
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-button').removeClass('hidden')
-  $('#game-board').removeClass('hidden')
   $('#start-new-game').removeClass('hidden')
 }
 
@@ -28,7 +27,6 @@ const changePasswordSuccess = function (changePasswordResponse) {
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-button').removeClass('hidden')
-  $('#game-board').removeClass('hidden')
   $('#start-new-game').removeClass('hidden')
 }
 
