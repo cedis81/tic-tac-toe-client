@@ -15,6 +15,8 @@
       <h1>Tic Tac Toe</h1>
       <div id="message">
         <span class="opening-message">This is the default message when you land on this page.</span>
+      </div>
+      <div>
         <!-- sign up form starts here -->
         <form id="sign-up-form">
           <legend>Sign-up to play Tic Tac Toe!</legend>
@@ -46,7 +48,7 @@
         <!-- log out button ends here -->
       </div>
       <br>
-      <div class="container hidden">
+      <div id="game-board" class="container hidden">
         <div class="row">
           <div class="col-4 box data-cell-index0">ARRAY 0</div>
           <div class="col-4 box data-cell-index1">ARRAY 1</div>
@@ -63,6 +65,7 @@
           <div class="col-4 box data-cell-index8">ARRAY 8</div>
         </div>
       </div>
+      <br>
       <div class="game-form">
         <button id="start-new-game" class="hidden">Start new game</button>
         <!-- <form id="reset-game-form" class="hidden">
