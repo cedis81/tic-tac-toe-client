@@ -11,6 +11,25 @@ const onCreateGame = function (event) {
     .catch(ui.failure)
 }
 
+const onMakeMove = function (event) {
+  event.preventDefault()
+  const gameData = {
+    'game': {
+      'cell': {
+        'index': event.target.dataset.cellIndex,
+        'value': 'x'
+      },
+      'over': false
+    }
+  }
+  $(event.target).trigger('reset')
+  api.makeMove(gameData)
+    .then(ui.makeMoveSuccess)
+    .catch(ui.failure)
+  console.log(gameData)
+}
+
 module.exports = {
-  onCreateGame
+  onCreateGame,
+  onMakeMove
 }

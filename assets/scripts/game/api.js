@@ -13,6 +13,19 @@ const createGame = function (gameData) {
   })
 }
 
+const makeMove = function (moveData) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    contentType: 'application/json',
+    data: JSON.stringify(moveData)
+  })
+}
+
 module.exports = {
-  createGame
+  createGame,
+  makeMove
 }

@@ -8,6 +8,7 @@ const signUpSuccess = function (signUpResponse) {
 }
 
 const signInSuccess = function (signInResponse) {
+  console.log(signInResponse)
   store.user = signInResponse.user
   $('#message').html('You signed in successfully')
   $('#message').addClass('success-message')
