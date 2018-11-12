@@ -13,7 +13,7 @@ const createGame = function (gameData) {
   })
 }
 
-const makeMove = function (moveData) {
+const makeMove = function (index, playerValue, gameStatus) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -21,7 +21,15 @@ const makeMove = function (moveData) {
       Authorization: `Token token=${store.user.token}`
     },
     contentType: 'application/json',
-    data: JSON.stringify(moveData)
+    data: JSON.stringify({
+      'game': {
+        'cell': {
+          'index': index,
+          'value': playerValue
+        },
+        'over': gameStatus
+      }
+    })
   })
 }
 

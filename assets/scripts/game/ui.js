@@ -1,18 +1,26 @@
 const store = require('../store.js')
+const gamePlay = require('../game/game-play.js')
 
 const createGameSuccess = function (newGame) {
   $('#game-board').removeClass('hidden')
   store.game = newGame.game
-  console.log(store)
-  console.log(newGame.game.id)
+  // gamePlay.emptyGameBoard = newGame.game.cells
+  $('#message').addClass('hidden')
 }
 
 const makeMoveSuccess = function (newMove) {
-  console.log(newMove)
-  console.log('a move was made')
+  store.game = newMove.game
+  gamePlay.playMove()
+  console.log(gamePlay.player)
+  console.log(gamePlay.emptyGameBoard)
+}
+
+const makeMoveFailure = function () {
+  $('#message').html('You messed up, bruh')
 }
 
 module.exports = {
   createGameSuccess,
-  makeMoveSuccess
+  makeMoveSuccess,
+  makeMoveFailure
 }

@@ -1,6 +1,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const gamePlay = require('./game-play.js')
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -13,20 +14,13 @@ const onCreateGame = function (event) {
 
 const onMakeMove = function (event) {
   event.preventDefault()
-  const gameData = {
-    'game': {
-      'cell': {
-        'index': event.target.dataset.cellIndex,
-        'value': 'x'
-      },
-      'over': false
-    }
-  }
+  const index = event.target.dataset.cellIndex
+  const playerValue = gamePlay.player
+  const gameStatus = gamePlay.over
   $(event.target).trigger('reset')
-  api.makeMove(gameData)
+  api.makeMove(index, playerValue, gameStatus)
     .then(ui.makeMoveSuccess)
-    .catch(ui.failure)
-  console.log(gameData)
+    .catch(ui.makeMovefailure)
 }
 
 module.exports = {
