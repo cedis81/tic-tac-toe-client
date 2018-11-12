@@ -10,9 +10,6 @@ const createGameSuccess = function (newGame) {
 
 const makeMoveSuccess = function (newMove) {
   store.game = newMove.game
-  gamePlay.playMove()
-  console.log(gamePlay.player)
-  console.log(gamePlay.emptyGameBoard)
 }
 
 const makeMoveFailure = function () {

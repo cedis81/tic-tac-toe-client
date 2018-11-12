@@ -7,11 +7,14 @@ let over = false
 // const playerX = []
 // const playerY = []
 
-const playMove = function () {
+const playMove = function (index) {
   // check for square availability. if gameboard length is even, player is X
-  if (!emptyGameBoard[3]) {
+  if (!emptyGameBoard[index]) {
     // square is available, mark it unavailable and give square index to user X
-    emptyGameBoard[3] = player
+    emptyGameBoard[index] = player
+    console.log(emptyGameBoard[index])
+    console.log('break')
+    console.log(emptyGameBoard)
   } else {
     console.log('you cant do this')
   }

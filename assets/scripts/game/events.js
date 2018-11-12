@@ -17,6 +17,7 @@ const onMakeMove = function (event) {
   const index = event.target.dataset.cellIndex
   const playerValue = gamePlay.player
   const gameStatus = gamePlay.over
+  gamePlay.playMove(index)
   $(event.target).trigger('reset')
   api.makeMove(index, playerValue, gameStatus)
     .then(ui.makeMoveSuccess)
