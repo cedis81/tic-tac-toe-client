@@ -2,6 +2,7 @@
 
 body {
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -15,7 +16,7 @@ body {
   display: flex;
   height: 80px;
   justify-content: center;
-  // padding: 100px;
+  padding: 50px;
 }
 
 .hidden {
