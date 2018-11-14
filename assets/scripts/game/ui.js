@@ -3,6 +3,7 @@ const gamePlay = require('../game/game-play.js')
 
 const createGameSuccess = function (newGame) {
   $('#game-board').removeClass('hidden')
+  $('#message').addClass('success-message')
   store.game = newGame.game
   store.player = 'x'
   store.playerX = []

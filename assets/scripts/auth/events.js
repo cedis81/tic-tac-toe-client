@@ -27,7 +27,7 @@ const onChangePassword = function (event) {
   $(event.target).trigger('reset')
   api.changePassword(userData)
     .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function () {

@@ -40,6 +40,7 @@ const signOutSuccess = function () {
   $('#sign-out-button').addClass('hidden')
   $('#game-board').addClass('hidden')
   $('#start-new-game').addClass('hidden')
+  $('#change-password-form').trigger('reset')
 }
 
 const failure = function (failureResponse) {
@@ -48,7 +49,14 @@ const failure = function (failureResponse) {
   $('#message').removeClass('success-message')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
-  $('#change-password-form').removeClass('hidden')
+  $('#change-password-form').trigger('reset')
+}
+
+const changePasswordFailure = function (failureResponse) {
+  $('#message').html('Something went wrong, please try again')
+  $('#message').addClass('error-message')
+  $('#message').removeClass('success-message')
+  $('#change-password-form').trigger('reset')
 }
 
 module.exports = {
@@ -56,5 +64,6 @@ module.exports = {
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
-  failure
+  failure,
+  changePasswordFailure
 }
