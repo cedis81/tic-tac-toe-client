@@ -8,7 +8,7 @@ const createGameSuccess = function (newGame) {
   store.player = 'x'
   store.playerX = []
   store.playerO = []
-  $('#message').addClass('hidden')
+  $('#message').html('Player x, it is your turn. Do not do something stupid')
   $('[data-cell-index="0"]').html('')
   $('[data-cell-index="1"]').html('')
   $('[data-cell-index="2"]').html('')
@@ -21,13 +21,15 @@ const createGameSuccess = function (newGame) {
 }
 
 const makeMoveSuccess = function (newMove) {
-  $('#message').addClass('hidden')
-  $('#message').html('')
   store.game = newMove.game
   gamePlay.createPlayerArray(store.boardIndex, store.player)
   $('[data-cell-index="' + store.boardIndex + '"]').html(store.player)
   gamePlay.checkForWin(store.playerX, store.playerO)
   gamePlay.switchPlayer()
+  console.log(store.game.over)
+  if (store.game.over === false) {
+    $('#message').html('Player ' + store.player + ', it is your turn.')
+  }
 }
 
 const makeMoveFailure = function () {

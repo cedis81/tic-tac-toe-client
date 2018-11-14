@@ -16,6 +16,7 @@ const createPlayerArray = function (index, player) {
 }
 
 const checkForWin = function (arrayX, arrayO) {
+  // use createPlayerArray results, which stores each players' index to check for victory
   if (arrayX.includes('0') && arrayX.includes('1') && arrayX.includes('2')) {
     $('#message').removeClass('hidden')
     $('#message').html('Player X wins!')
