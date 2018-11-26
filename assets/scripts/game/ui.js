@@ -20,13 +20,16 @@ const createGameSuccess = function (newGame) {
   $('[data-cell-index="8"]').html('')
 }
 
+const findGamesCountSuccess = function (data) {
+  $('#message').html(store.user.email + ', you\'ve played ' + data.games.length + ' games.')
+}
+
 const makeMoveSuccess = function (newMove) {
   store.game = newMove.game
   gamePlay.createPlayerArray(store.boardIndex, store.player)
   $('[data-cell-index="' + store.boardIndex + '"]').html(store.player)
   gamePlay.checkForWin(store.playerX, store.playerO)
   gamePlay.switchPlayer()
-  console.log(store.game.over)
   if (store.game.over === false) {
     $('#message').html('Player ' + store.player + ', it is your turn.')
   }
@@ -40,6 +43,7 @@ const makeMoveFailure = function () {
 
 module.exports = {
   createGameSuccess,
+  findGamesCountSuccess,
   makeMoveSuccess,
   makeMoveFailure
 }

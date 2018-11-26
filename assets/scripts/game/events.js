@@ -10,13 +10,19 @@ const onCreateGame = function (event) {
     .catch(ui.failure)
 }
 
+const onFindGamesCount = function (event) {
+  event.preventDefault()
+  api.findGamesCount()
+    .then(ui.findGamesCountSuccess)
+    .catch(ui.failure)
+}
+
 const onMakeMove = function (event) {
   event.preventDefault()
   const index = event.target.dataset.cellIndex
   const playerValue = store.player
   const gameStatus = store.game.over
   store.boardIndex = index
-  // gamePlay.checkSquare(index, playerValue)
   if (store.game.cells[index] === '' && store.game.over === false) {
     gamePlay.boardIndex = index
     api.makeMove(index, playerValue, gameStatus)
@@ -29,5 +35,6 @@ const onMakeMove = function (event) {
 
 module.exports = {
   onCreateGame,
+  onFindGamesCount,
   onMakeMove
 }

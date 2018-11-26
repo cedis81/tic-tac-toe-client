@@ -1,11 +1,5 @@
 const store = require('../store.js')
 
-// const checkSquare = function (index, player) {
-//   if (store.game.cells[index] === '') {
-//     store.game.cells[index] = player
-//   }
-// }
-
 const createPlayerArray = function (index, player) {
   // create player arrays to check for win condition
   if (player === 'x') {
@@ -94,7 +88,6 @@ const switchPlayer = function () {
 }
 
 module.exports = {
-  // checkSquare,
   createPlayerArray,
   switchPlayer,
   checkForWin
