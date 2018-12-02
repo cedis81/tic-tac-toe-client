@@ -3,6 +3,7 @@ const gamePlay = require('../game/game-play.js')
 
 const createGameSuccess = function (newGame) {
   $('#game-board').removeClass('hidden')
+  $('#message').removeClass('error-message')
   $('#message').addClass('success-message')
   store.game = newGame.game
   store.player = 'x'
@@ -21,10 +22,14 @@ const createGameSuccess = function (newGame) {
 }
 
 const findGamesCountSuccess = function (data) {
+  $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
   $('#message').html(store.user.email + ', you\'ve played ' + data.games.length + ' games.')
 }
 
 const makeMoveSuccess = function (newMove) {
+  $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
   store.game = newMove.game
   gamePlay.createPlayerArray(store.boardIndex, store.player)
   $('[data-cell-index="' + store.boardIndex + '"]').html(store.player)
@@ -36,9 +41,9 @@ const makeMoveSuccess = function (newMove) {
 }
 
 const makeMoveFailure = function () {
-  $('#message').removeClass('hidden')
+  $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
-  $('#message').html('You messed up, bruh')
+  $('#message').html('Something went wrong, please try again.')
 }
 
 module.exports = {

@@ -1,17 +1,17 @@
 const store = require('../store.js')
 
 const signUpSuccess = function (signUpResponse) {
-  $('#message').html('You signed up successfully')
-  $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
+  $('#message').html('You signed up successfully')
   $('#sign-up-form').addClass('hidden')
 }
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  $('#message').html('You signed in successfully')
-  $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
+  $('#message').html('You signed in successfully')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
@@ -21,9 +21,9 @@ const signInSuccess = function (signInResponse) {
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
-  $('#message').html('You changed your password successfully.')
-  $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
+  $('#message').html('You changed your password successfully.')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
@@ -33,9 +33,9 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
-  $('#message').html('You signed out successfully.')
-  $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').addClass('success-message')
+  $('#message').html('You signed out successfully.')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
@@ -47,18 +47,18 @@ const signOutSuccess = function () {
 }
 
 const failure = function (failureResponse) {
-  $('#message').html('Something went wrong, please try again')
-  $('#message').addClass('error-message')
   $('#message').removeClass('success-message')
+  $('#message').addClass('error-message')
+  $('#message').html('Something went wrong, please try again.')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
   $('#change-password-form').trigger('reset')
 }
 
 const changePasswordFailure = function (failureResponse) {
-  $('#message').html('Something went wrong, please try again')
-  $('#message').addClass('error-message')
   $('#message').removeClass('success-message')
+  $('#message').addClass('error-message')
+  $('#message').html('Something went wrong, please try again.')
   $('#change-password-form').trigger('reset')
 }
 
