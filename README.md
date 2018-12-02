@@ -46,3 +46,5 @@ Per <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">Wikipedi
 </ol>
 
 <h3>Wireframes</h3>
+<p>Below is the version 1 wireframe created for MVP game play on tic-tac-toe</p>
+<img src="/assets/images/ttt_wireframe_1.JPG">
