@@ -2,7 +2,12 @@
 
 <p>For this project, we were tasked with creating a tic-tac-toe game from scratch using the technologies we have learned so far at the Web Development Immersive at General Assembly through three weeks. The goal for me was to achieve MVP (minimum viable product), and that was to have a gameboard play the game (rules stated below), with information sent from the client to the server using APIs to communicate back and forth. The games would be saved, and the rules of tic tac toe would be included in the game logic. Other items like page design/layout/themes, keeping track of wins and losses for each player, responsive design and possible AI based levels would be considered for later iterations of this game.</p>
 
-<p>I have created a gameboard using Bootstrap, HTML and SASS, and made API calls to the Heroku server using both Curl scripts and Ajax. The board itself plays with the use of Jquery, and the page is a single page application that does not necessitate refreshing to play a new game. Throughout the process, Git and GitHub were used for version control.</p>
+<p>I have created a gameboard using Bootstrap, HTML and SASS, and made API calls to the Heroku server using both curl scripts and Ajax. The board itself plays with the use of Jquery, and the page is a single page application that does not necessitate refreshing to play a new game. Throughout the process, Git and GitHub were used for version control.</p>
+
+<p>My planning process was to figure out the game logic first and to try and plan out the steps needed. We had six days to complete this project; with this knowledge I took two hours before I even started to code to plan how I wanted to work on the logic and address the steps that the game would need to take to work. At the conclusion of the work day, since I had no code, I decided to work on the API calls and complete the user authentication process  so I could see tangible results after the first day to gain some momentum.</p>
+
+<p>The next few days were spent working on making sure the game board was created, and really working through the game APIs and how I could use that data to form the logic that was created on the first day. After what felt like thousands of games (it was only 268!) created on the dev server just to log what information was being sent back at each step, I was ready to put everything together. The entire process felt like it took a really long time for what I produced, but being methodical really helped me to understand what each step was doing. When it came time to troubleshoot and make changes, the timing was extremely quick - I knew exactly where everything that needed to be changed was. That final day putting everything together was exhilariting. Putting things together and having them work on the first or second try and chaining that success together was well worth the time spent making this game. I can't wait to work further to refactor code, add functionality and to make the page look aesthetically pleasing.
+</p>
 
 <p><em>Rules and specifications:</em>
 <br>
@@ -25,8 +30,8 @@ Per <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">Wikipedi
 <h3>List of technologies used:</h3>
 <ul>
   <li>Jquery</li>
-  <li>Ajax</li>
-  <li>Javascript</li>
+  <li>AJAX</li>
+  <li>JavaScript</li>
   <li>HTML</li>
   <li>SASS</li>
   <li>Bootstrap</li>
